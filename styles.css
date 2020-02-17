@@ -1,0 +1,330 @@
+*, *:before, *:after {box-sizing: border-box;}
+
+html {scroll-behavior: smooth;}
+
+nav, #portfolio-head-section,
+#contact-section {
+    font-family: 'Oswald', sans-serif;
+}
+
+a, a:visited, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ______NAVBAR_________ */
+nav {z-index: 0;}
+
+.navbar-custom .navbar-toggler {
+    color: black;
+    border-color: black;
+}
+
+.logo-2 {
+    position: absolute;
+    z-index: 1111111;
+    animation-name: scroll-down;
+    animation-duration: 0.4s;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/* ______PORTFOLIO______ */
+#portfolio-section div.container {margin-bottom: 10px;}
+
+#portfolio-section img {
+    width: 350px;
+    height: auto;
+}
+
+
+/* ________ABOUT_________ */
+#about-head-section {
+    background: rgba(0, 0, 0, 0.219);
+    padding: 70px;
+    position: relative;
+}
+
+h2  {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.one-font,
+.two-font {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: rgba(0, 0, 0, 0.404);
+}
+
+.one-font::after,
+.two-font::after {
+    white-space: pre;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    color:  rgba(42, 41, 41, 0.835);
+    mix-blend-mode: multiply;
+}
+
+.one-font::after{content: "TEXAS-BASED";}
+.two-font::after {content: "THROUGH A LENS";}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#about-section {
+    background-color: rgba(0, 0, 0, 0.835);
+    color: #fff;
+}
+
+#about-section img {
+    width: 175px;
+    -webkit-box-shadow: inset -1px 3px 8px 5px, 2px 5px 16px 0px #0B325E, 5px 5px 15px 1px rgba(0,0,0,0.47); 
+    box-shadow: inset -1px 3px 8px 5px, 2px 5px 16px 0px #0B325E, 5px 5px 15px 1px rgba(0,0,0,0.47);
+}
+
+#about-section p {
+    text-indent: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+
+/* ______IMAGE-STRIP______ */
+#image-strip-section div.container.m-0 {
+    margin-right: -75px;
+    max-width: 100%;
+}
+
+img.strip-img-grid {width: 100%;}
+
+.instagram {
+    width: 45px;
+    height: 45px;
+    background: url('img/instagram-bw.svg') no-repeat;
+    display: inline-block;
+}
+
+.instagram:hover {background: url('img/instagram-color.svg') no-repeat;}
+
+.twitter {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.fab {
+    position: absolute;
+    top: -2px;
+}
+
+.twitter:hover {color: #1CA1F2;}
+
+.flickr {
+    width: 45px;
+    height: 45px;
+    background: url('img/flickr-bw.svg') no-repeat;
+    display: inline-block;
+}
+
+.flickr:hover {background: url('img/flickr-color.svg') no-repeat;}
+
+
+.instagram, .twitter, .flickr {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -ms-transition: -ms-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+
+.instagram:hover,
+.twitter:hover,
+.flickr:hover {
+    transform: rotate(-5deg) scale(1.5);
+    -ms-transform: rotate(-5deg) scale(1.5);
+    -webkit-transform: rotate(-5deg) scale(1.5);
+}
+
+.flickr:hover {
+    transform: rotate(5deg) scale(1.5);
+    -ms-transform: rotate(5deg) scale(1.5);
+    -webkit-transform: rotate(5deg) scale(1.5);
+}
+
+#contact-section h4 {font-size: 1.1rem;}
+
+
+
+/* sm */
+@media (min-width: 768px) {
+    #portfolio-section div.row {width: 725px;}
+    #portfolio-section img {width: 750px;}
+    #portfolio-head-section h2 {font-size: 1.8rem;}
+    #about-section {padding-bottom: 30px;}
+    #about-section p {margin-right: 50px;}
+    .contact-icons {font-size: 3vw;}
+    .email {font-size: 1.2rem !important;}
+}
+
+
+
+/* md */
+@media (min-width: 1024px) {
+    .logo-2 {
+        width: 500px;
+        height: 500px;
+        top: 260px;
+        left: 27%;
+    }
+
+    .nav-item {
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+        -ms-transition: -ms-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+    }
+    
+    .nav-item:hover {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+
+    #portfolio-section {margin-top: 10px;}
+    #portfolio-section div.row {width: 950px;}
+    #portfolio-section img {width: 900px;}
+
+    h2 {font-size: 2rem;}
+
+    #about-section p {font-size: 1.2rem;}
+}
+
+
+
+/* lg */
+@media (min-width: 1200px) {
+    .logo-2 {
+        width: 650px;
+        height: 650px;
+        top: 275px;
+        left: 27%;
+    }
+
+    .nav-item {
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+        -ms-transition: -ms-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+    }
+    
+    .nav-item:hover {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+    
+    ul.navbar-nav.mx-auto.h4 {font-size: 2.5vw;}
+
+    #portfolio-section div.container {
+        margin-right: 230px;
+        margin-bottom: 75px;
+    }
+
+    #portfolio-section div.row {width: 1300px}
+    #portfolio-section img {width: 750px;}
+
+    h2 {font-size: 2.5rem;}
+
+    #about-section {padding-bottom: 50px;}
+
+    #about-section div.row {
+        width: 1000px;
+        margin-left: 200px;
+    }
+
+    #about-section img {width: 250px;}
+    #about-section p {font-size: 1.5rem;}
+
+    .contact-icons {font-size: 2.5vw;}
+}
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100001; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
